@@ -4,7 +4,7 @@ use ArrayAccess;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Factory as Validator;
 
-abstract class GenericForm extends GenericValidator implements ArrayAccess {
+abstract class GenericForm extends GenericValidator implements ArrayAccess, IteratorAggregate {
 
     /**
      * Input class
@@ -138,7 +138,16 @@ abstract class GenericForm extends GenericValidator implements ArrayAccess {
      * get the validation rules to run against form data
      * @return array
      */
-    abstract public function getRules();
+    abstract protected function getRules();
+
+    /**
+     * get the iterator for elements
+     * @return ArrayIterator
+     */
+    public function getIterator()
+    {
+        return new ArrayIterator($this->elements);
+    }
 
     /**
      * check if offset exists on array
