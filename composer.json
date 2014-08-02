@@ -1,0 +1,24 @@
+{
+    "name": "gufran/former",
+    "description": "Better way to handle forms and validation as an entity",
+    "keywords": ["laravel", "framework", "form", "validation"],
+    "require": {
+        "illuminate/validation": "4.2.*",
+        "illuminate/http": "4.2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gufran\\Former\\": "Gufran/Former"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohammad Gufran",
+            "email": "dogabhai@gmail.com",
+            "homepage": "http://gufran.me",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev"
+}
