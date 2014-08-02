@@ -131,7 +131,7 @@ abstract class GenericForm extends GenericValidator implements ArrayAccess {
      */
     public function get($value)
     {
-        return isset($this->elements[$value]) ?: null;
+        return $this->elements[$value];
     }
 
     /**
