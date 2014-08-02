@@ -60,7 +60,17 @@ abstract class GenericForm extends GenericValidator implements ArrayAccess {
         if($this->hydrated) return;
 
         $this->rules = $this->getRules();
-        $this->elements = $this->input->only(array_keys($this->rules));        
+        $this->elements = $this->input->only(array_keys($this->rules));
+
+        // also fetch any confirmation field
+        foreach($this->input->all() as $key => $value) 
+        {
+            if(mb_substr($key, -12) === 'confirmation')
+            {
+                $this->elements[$key] = $value;
+            }
+        }
+
         $this->hydrated = true;
     }
 
