@@ -102,7 +102,16 @@ abstract class GenericForm extends GenericValidator implements ArrayAccess {
      */
     public function getValues()
     {
-        return $this->elements;
+        $values = array();
+
+        foreach($this->elements as $key => $value)
+        {
+            if(mb_substr($key, -12) === 'confirmation') continue;
+
+            $values[$key] = $value;
+        }
+
+        return $values;
     }
 
     /**
