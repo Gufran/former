@@ -1,6 +1,7 @@
 <?php namespace Gufran\Former;
 
 use ArrayAccess;
+use IteratorAggregate;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Factory as Validator;
 
