@@ -6,6 +6,10 @@
         "illuminate/validation": "4.2.*",
         "illuminate/http": "4.2.*"
     },
+    "require-dev": {
+        "mockery/mockery": "0.9.*@dev",
+        "phpunit/phpunit": "4.3.*@dev"
+    },
     "autoload": {
         "psr-4": {
             "Gufran\\Former\\": "src/Gufran/Former"
