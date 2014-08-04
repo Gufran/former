@@ -8,7 +8,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Gufran\\Former\\": "Gufran/Former"
+            "Gufran\\Former\\": "src/Gufran/Former"
         }
     },
     "license": "MIT",
